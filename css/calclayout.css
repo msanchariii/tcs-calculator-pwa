@@ -6,6 +6,12 @@
 
 body {
     font-family: Arial;
+    /* background-color: lightblue; */
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .calc_close {
     background: url("../images/Sprite.png") no-repeat -204px -13px;
@@ -124,16 +130,52 @@ body {
     margin-top: 0px;
     padding: 10px;
 }
-.calc_container {
-    background: none repeat scroll 0 0 #dadada;
+/* .calc_container {
+    background: none repeat scroll 0 0;
+    background-color: rgba(211, 211, 211, 0.779);
     border: 1px solid #aaa;
     border-radius: 5px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) inset;
     padding: 0px;
+
     width: 463px;
     border-bottom: 7px solid #999;
     position: relative;
+} */
+.calc_container {
+    background: none repeat scroll 0 0;
+    background-color: rgb(211, 211, 211);
+    width: 463px;
+    height: 329px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+@media (max-width: 1024px) {
+    /* Adjust for tablets and phones */
+    .calc_container {
+        width: 100vw;
+        max-width: 463px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Ensure it's centered */
+    }
+    body {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(211, 211, 211);
+    }
+}
+
 #keyPad_Help {
     /* position: absolute!important;
     right: 125px;*/
@@ -325,7 +367,7 @@ body {
 #helptopDiv {
     margin-bottom: 5px;
     padding: 10px;
-    background-color: #4286f3;
+    background-color: rgb(85, 169, 221);
     color: #ffffff;
     /* cursor: move; */
 }
@@ -334,3 +376,13 @@ body {
     /*float:right !important;*/
 }
 /** new help changes **/
+
+/* @media (min-width: 768px) {
+    html,
+    body {
+        width: 463px; 
+        height: 329px; 
+        margin: auto;
+        overflow: hidden; 
+    }
+}  */
