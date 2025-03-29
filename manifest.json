@@ -1,7 +1,7 @@
 {
     "name": "TCS Calculator",
     "short_name": "Calculator",
-    "start_url": "/",
+    "start_url": "/tcs-calculator-pwa/",
     "scope": "./",
     "display": "standalone",
     "background_color": "#ffffff",
